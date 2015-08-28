@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MailerApp">
+    <head>
+    	<title>Mailer App</title>
+    	<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  	<!-- bootstrap css -->
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  		 <script type="text/javascript" src="app.js"></script>
+
+    </head>
+    <body ng-controller="EmailController">
+    	<div class="container" style="padding-top:30px;">
+      		<table class="table table-bordered table-condensed">
+      			<tr ng-repeat="email in emails">
+      				<td>{{ email.from }}</td>
+      				<td>{{ email.subject }}</td>
+      				<td>{{ email.date }}</td>
+      			</tr>
+      		</table>
+  		</div>
+    </body>
+</html>
